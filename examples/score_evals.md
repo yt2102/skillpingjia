@@ -4,12 +4,11 @@
 
 ## 用例 1：正面样本（正常 skill）
 
-- 对象：`../workspace-work/skills/jishufangan`（相对本 skill 的上级 workspace，已打分 65 分）
+- 对象：`evals/cases/regression_jishufangan_v315`（包内真实事故 fixture）
 - 断言：
-  - 报告含全部 6 个维度分数行
-  - 总分在 60-70 区间（与 2026-08-13 人工打分 65 分一致，±5）
-  - 硬门槛 3/3 通过（frontmatter ✅、158 行 ✅、desc ✅）
-  - 输出契约维度 ≤10 分（函数封装非 JSON 单源，教训点必须命中）
+  - 报告含全部 7 个维度分数行
+  - ir_closure 抓出 `heading` 类型漂移（该 fixture 的已知缺陷）
+  - fallback_branches.uncovered 含 `heading`
 
 ## 用例 2：负面样本（无 frontmatter）
 
