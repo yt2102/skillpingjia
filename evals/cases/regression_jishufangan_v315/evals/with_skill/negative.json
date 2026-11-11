@@ -1,0 +1,12 @@
+{
+  "case_name": "negative",
+  "skill_mode": "with_skill",
+  "timestamp": "2026-08-22T20:14:08",
+  "case_description": "负面样本：非政务需求（会议纪要），应不触发政务格式生成",
+  "scenario": "",
+  "result": {
+    "ok": true,
+    "output": "/tmp/jishufangan_runner_1787400848694.docx",
+    "size_kb": 36.4
+  }
+}

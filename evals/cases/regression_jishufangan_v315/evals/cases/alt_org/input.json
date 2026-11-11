@@ -1,0 +1,8 @@
+{
+  "target_path": "evals/cases/alt_org/fixture",
+  "full_content": "---\nname: alt_org_test\ndescription: org 参数化测试\n---\n# 正文\n测试 org 三层次取值。",
+  "description": "org 不同用例：JISHUFANG_ORG 环境变量应覆盖硬编码默认值",
+  "expected_score": {
+    "hard_gates": {"H1": true, "H2": true, "H3": true, "H4": true}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "case_name": "simple_normal",
+  "skill_mode": "without_skill",
+  "timestamp": "2026-08-22T20:14:09",
+  "case_description": "简版方案-正常样本：v3.5 无封面 + 大标题首加，7 章客户式",
+  "scenario": "客户高层预审 / 方案说明",
+  "result": {
+    "ok": true,
+    "output": "/tmp/jishufangan_runner_no_skill_1787400849465.docx",
+    "size_kb": 36.2
+  }
+}

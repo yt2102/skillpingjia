@@ -1,0 +1,34 @@
+{
+  "$schema": "jishufangan-baseline-v3",
+  "baseline_date": "2026-08-22",
+  "scoring_system": "skillpingjia v3.1 100 分制",
+  "previous_version": "v2 (2026-08-18, 94 分)",
+  "current_score": "pending",
+  "current_status": "v3.x 重构后，需 skillpingjia 评审 agent 重跑确认",
+  "applied_fixes": [
+    "Step 0.1: 默认值参数化（date 动态生成 + org 中性占位 'XX 单位'）",
+    "Step 0.2: 澄清规则 org 默认值同步",
+    "Step 0.3: SKILL.md 依赖节补 Pillow",
+    "Step 0.4: CLAUDE.md 行数与文件树同步",
+    "Step 0.5: 删除死引用 assets/gov-plan-docx.zip",
+    "Step 1: 新建 scripts/format_config.py 唯一事实源（修 H4 三权分立）",
+    "Step 1.1: 附带修复简版 Normal 行距 24pt",
+    "Step 2: 删除虚构 HTML 降级承诺",
+    "Step 3: 路由决策树前置 + SKILL.md 瘦身（361 → 317 行）",
+    "Step 4: 新建 evals/runner.py + with/without 双跑闭环"
+  ],
+  "expected_improvements": {
+    "H1_frontmatter": "保持 ✅",
+    "H2_skill_md_length": "361 → 317 (< 500) ✅",
+    "H3_description_length": "保持 ✅（357 字符）",
+    "H4_tripartite": "SKILL.md 与 scripts/ 数值常量已下沉到 format_config.py，应通过 ✅",
+    "trigger_design": "路由决策树前置，应达满分 20",
+    "structural_sanity": "H4 修复后 references_split 不再归 0，应达 20",
+    "config_boundary": "org 中性占位 + 死引用清理，应达 5",
+    "evaluation_closure": "runner.py + with/without 双跑记录齐备，应达 15",
+    "process_discipline_output_contract_guardrails": "保持 15/15/10"
+  },
+  "next_action": "请 skillpingjia 评审 agent 对当前 master 分支（最新 commit 含 Step 0-4）跑一次正式评审，确认 H4 通过并更新 total_score",
+  "replay_threshold": 5,
+  "note": "evals/cases 9 个 (含 3 simple_)，runner.py 跑全部 0 失败。baseline.json v2 (94) 是修复前快照；v3 待评分。"
+}

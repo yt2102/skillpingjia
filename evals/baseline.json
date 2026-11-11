@@ -1,0 +1,42 @@
+{
+  "$schema": "skillpingjia-baseline-v3.3",
+  "baseline_date": "2026-09-07",
+  "evaluator": "caller-injected (model-agnostic)",
+  "target": "self (skillpingjia)",
+  "scoring_system": "100 分制（v3.3）",
+  "dimension_scores": {
+    "trigger_design": 0,
+    "process_discipline": 0,
+    "structural_sanity": 20,
+    "output_contract": 0,
+    "guardrails": 0,
+    "config_boundary": 0,
+    "evaluation_closure": 15
+  },
+  "total_score": 35,
+  "v32_additions": {
+    "version_info": "评分对象版本声明（git commit/branch/dirty/mtime），防评错副本",
+    "executable_evidence": "执行验证 dry-run：真实跑目标 evals/runner.py + 占位正文扫描 + 示例入口死引用检测",
+    "element_closure": "structure 元素类型闭合性：SKILL.md 承诺 vs 渲染入口实际处理，unhandled 非空 = 降档证据",
+    "route_evidence": "内部路由与 description 覆盖一致性：missing 非空 = 触发设计降档候选",
+    "evaluation_effectiveness": "评估闭环有效性：runner 可跑 / baseline 偏差>5 需复盘 / 豁免声明检测"
+  },
+  "v33_additions": {
+    "ir_closure": "P0-1 IR 全链路双向闭合性：producer 产出 ⊄ consumer 白名单（heading_preserved 案）。score.py 新增 _collect_ir_closure() 泛化实现",
+    "silent_failures": "P0-2 静默失败扫描：except Exception: pass 计数 + warning 配套检查。score.py 新增 _collect_silent_failures()",
+    "fallback_branches": "P1-1 兜底分支触发审计：elif typ in (...) / dict.get 兜底分支的接受类型集合 ⊂ producer 时 → uncovered 非空 = 降档证据",
+    "real_samples_required": "P1-2 真实样本回归要求：评估闭环 3 分拆出 1 分专给'有真实事故 case'（如 jishufangan v3.15 回归）",
+    "docstring_api": "P2 声明-实现对照：SKILL.md 中 code block 提到的入口函数 vs scripts/ 实际定义，missing 非空 = judge 人工核对"
+  },
+  "fixtures_v33": {
+    "contract_drift": "最小 fixture：parser 产出 ('heading_p', ...)，save ALLOWED_TYPES 缺它 → drift=['heading_p']",
+    "blind_fallback": "最小 fixture：parser 产出 ('h1_present', bool)，renderer 兜底 elif typ in (..., 'body',) 缺它 → uncovered=['h1_present']",
+    "validation_status": "两个 fixture 已被 _collect_ir_closure() / _collect_fallback_branches() 抓出（2026-09-07 验证）"
+  },
+  "v33_bite_check": {
+    "purpose": "验证 v3.3/v3.3.1 判据能在 jishufangan v3.15 修复前快照上抓出真实 bug",
+    "expected": "三大判据（IR闭合 / 兜底分支 / 静默失败）必须分别抓出 allowed_types 缺口、h1_present 盲点、裸 pass；v3.3.1 加 real_path_regression 抓生产入口覆盖",
+    "completed": "评 fd3d101 快照（libjishu.py 首次进 git = v3.x 修复前）：四闸门全过 —— ir_closure.gaps 含 heading (drift) ✅ / fallback_branches.uncovered 含 heading ✅ / silent_failures.warn_no_propagation = 7 ✅ / real_path_regression.production_entry = generate_from_structure ✅。已通过 evals/cases/regression_jishufangan_v315 永久固化（2026-09-07 验证）"
+  },
+  "note": "规则可判部分（结构 20 + 评估闭环 15）为基线；v3.2/v3.3 新增 5+5 类素材为 judge 线索，不自动改规则分；LLM 维度分待调用方注入后回填（不绑定任何模型/平台）。下次打分偏差 >5 必须复盘差异维度。"
+}

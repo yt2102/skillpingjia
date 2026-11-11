@@ -1,0 +1,6 @@
+{
+  "target_path": "evals/cases/negative/fixture",
+  "full_content": "会议纪要：今天讨论了项目进度和下周计划。",
+  "description": "负面样本：非政务需求（会议纪要），应不触发政务格式生成",
+  "expected_score": {}
+}

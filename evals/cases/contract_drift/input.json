@@ -1,0 +1,5 @@
+{
+  "target_path": "evals/cases/contract_drift",
+  "description": "Contract drift fixture：parser 产出 heading_p，save 的 allowed_types 与 renderer 的 elif 都不认它。期望 v3.3 ir_closure.gaps 抓出 drift 类型 heading_p。",
+  "expect_ir_closure_gaps": ["heading_p"]
+}

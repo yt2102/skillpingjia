@@ -1,0 +1,5 @@
+{
+  "target_path": "evals/cases/kit_engineering",
+  "description": "v3.4 套件工程 fixture：模拟 NVIDIA auto-ontology 五件套包（契约 yaml + BENCHMARK + 披露卡 + 签名 + AGENTS 路由 + 活真源声明）。期望 package_engineering 六项线索全命中。",
+  "expect_package_engineering": ["contract_asset", "eval_report", "disclosure_card", "signature", "kit_routing", "live_source_principle"]
+}

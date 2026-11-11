@@ -1,0 +1,12 @@
+{
+  "case_name": "no_h1",
+  "skill_mode": "without_skill",
+  "timestamp": "2026-08-22T20:14:08",
+  "case_description": "无 H1 用例：generate_from_structure 应自动补「第1章 项目概述」占位段",
+  "scenario": "",
+  "result": {
+    "ok": true,
+    "output": "/tmp/jishufangan_runner_no_skill_1787400848880.docx",
+    "size_kb": 35.8
+  }
+}

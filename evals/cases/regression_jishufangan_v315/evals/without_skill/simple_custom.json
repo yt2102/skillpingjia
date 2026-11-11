@@ -1,0 +1,12 @@
+{
+  "case_name": "simple_custom",
+  "skill_mode": "without_skill",
+  "timestamp": "2026-08-22T20:14:09",
+  "case_description": "简版方案-自定义样本：详细 10 章 + 表格测试",
+  "scenario": "客户高层预审-详细版（含表格）",
+  "result": {
+    "ok": true,
+    "output": "/tmp/jishufangan_runner_no_skill_1787400849276.docx",
+    "size_kb": 36.4
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "case_name": "simple_boundary",
+  "skill_mode": "without_skill",
+  "timestamp": "2026-08-22T20:14:09",
+  "case_description": "简版方案-边界样本：极简 2 章（验证 chapters 必传且支持自定义）",
+  "scenario": "客户高层预审-极简版",
+  "result": {
+    "ok": true,
+    "output": "/tmp/jishufangan_runner_no_skill_1787400849085.docx",
+    "size_kb": 36.0
+  }
+}

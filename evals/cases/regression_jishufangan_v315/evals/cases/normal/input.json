@@ -1,0 +1,9 @@
+{
+  "target_path": ".",
+  "description": "正常样本：真实政务方案 prompt，断言能触发 + 生成 structure.json + docx",
+  "expected_score": {
+    "hard_gates": {"H1": true, "H2": true, "H3": true, "H4": true},
+    "structural_sanity_min": 16,
+    "evaluation_closure_min": 15
+  }
+}

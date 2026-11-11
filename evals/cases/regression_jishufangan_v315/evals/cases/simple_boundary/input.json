@@ -1,0 +1,20 @@
+{
+  "target_path": ".",
+  "description": "简版方案-边界样本：极简 2 章（验证 chapters 必传且支持自定义）",
+  "scenario": "客户高层预审-极简版",
+  "expected": {
+    "chapters": 2,
+    "must_trigger": true,
+    "use_default_chapters": false,
+    "structural_sanity_min": 14,
+    "evaluation_closure_min": 12
+  },
+  "fixture": {
+    "title": "XX 项目一页纸方案",
+    "chapters": [
+      ["一、为什么做", ["市场机会", "客户痛点"]],
+      ["二、怎么做", ["方案亮点"]]
+    ]
+  },
+  "notes": "边界场景：仅 2 章；验证 chapters 必传且可任意数量（1-10+）；v3.5 无封面"
+}

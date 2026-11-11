@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 备份文件（v3.2/v3.3 演进期间的 SKILL.md 备份）
+*.bak.*
+
+# skill 自身元数据
+.openclaw/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# 运行时临时产物
+*.tmp
+*.bak
+
+# 早期 v3.2 阶段的占位 fixture（v3.3 起改用 input.json）
+evals/cases/*/fixture

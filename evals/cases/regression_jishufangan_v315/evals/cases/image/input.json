@@ -1,0 +1,15 @@
+{
+  "target_path": ".",
+  "description": "图片处理用例：超大图缩放 ≤1024x1400、透明图白底化、损坏图拦截、docx 三要素闭环",
+  "expected_score": {
+    "hard_gates": {"H1": true, "H2": true, "H3": true, "H4": true},
+    "structural_sanity_min": 16,
+    "evaluation_closure_min": 15
+  },
+  "image_checks": [
+    {"name": "超大图缩放", "assert": "prepare_image(3000x2000 jpg) → width≤1024"},
+    {"name": "透明图白底", "assert": "prepare_image(RGBA png) → mode=RGB"},
+    {"name": "损坏图拦截", "assert": "prepare_image(非图片) → ValueError"},
+    {"name": "三要素闭环", "assert": "带图 docx → verify_docx_images ok=True"}
+  ]
+}

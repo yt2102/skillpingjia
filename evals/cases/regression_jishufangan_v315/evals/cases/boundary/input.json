@@ -1,0 +1,6 @@
+{
+  "target_path": "evals/cases/boundary/fixture",
+  "full_content": "预算清单：服务器 50 万，网络设备 20 万。",
+  "description": "边界样本：纯预算清单，按负触发应直接作答不走政务格式",
+  "expected_score": {}
+}

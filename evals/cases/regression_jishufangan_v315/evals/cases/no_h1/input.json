@@ -1,0 +1,8 @@
+{
+  "target_path": "evals/cases/no_h1/fixture",
+  "full_content": "---\nname: no_h1_test\ndescription: 无 H1 的 fixture\n---\n# 正文\n没有一级标题的内容。",
+  "description": "无 H1 用例：generate_from_structure 应自动补「第1章 项目概述」占位段",
+  "expected_score": {
+    "hard_gates": {"H1": true, "H2": true, "H3": true, "H4": true}
+  }
+}

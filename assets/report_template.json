@@ -1,0 +1,124 @@
+{
+  "$schema": "skillpingjia-report-v3.2",
+  "report": {
+    "skill_name": "[name]",
+    "skill_path": "[path]",
+    "evaluation_date": "[ISO8601]",
+    "evaluator": "[llm-as-judge model/version]",
+    "version_info": {
+      "git_commit": "[commit or null]",
+      "git_branch": "[branch or null]",
+      "git_dirty": false,
+      "mtime": "[unix ts]"
+    }
+  },
+  "inspection": {
+    "executable_evidence": {
+      "runner": {"exists": true, "passed": true, "exit_code": 0},
+      "placeholder_hits": ["scripts/xxx.py 含 '内容待撰写'"],
+      "example_calls": [{"function": "convert_to_x", "exists_in_scripts": true}]
+    },
+    "element_closure": {
+      "skill_md_types": ["heading", "image"],
+      "render_handled": ["heading"],
+      "unhandled": ["image"]
+    },
+    "route_evidence": {
+      "has_route_section": true,
+      "route_keywords_found": ["简版"],
+      "missing_in_description": ["简版"]
+    },
+    "evaluation_effectiveness": {
+      "runner_executable": {"has_runner": true, "passed": true},
+      "baseline_drift": {"expected_total": 35, "actual_total": 35, "drift": 0, "needs_review": false},
+      "exemption_declared": {"declared": true, "patterns": ["设计性偏离"]}
+    }
+  },
+  "hard_gates": {
+    "H1_frontmatter": {"pass": true, "evidence": "frontmatter 包含 name + description"},
+    "H2_lines_lt_500": {"pass": true, "evidence": "N 行 < 500"},
+    "H3_desc_le_1024": {"pass": true, "evidence": "description N 字符 ≤ 1024"},
+    "H4_three_principles": {"pass": true, "evidence": "无严重三权分立违反"}
+  },
+  "seven_dimensions": {
+    "trigger_design": {
+      "max": 20,
+      "score": 0,
+      "items": {
+        "explicit_words": {"weight": 5, "score": 0, "evidence": ""},
+        "implicit_intent": {"weight": 5, "score": 0, "evidence": ""},
+        "core_signal": {"weight": 4, "score": 0, "evidence": ""},
+        "pushy_pattern": {"weight": 1, "score": 0, "evidence": ""},
+        "negative_trigger": {"weight": 3, "score": 0, "evidence": ""},
+        "skill_exclusion": {"weight": 2, "score": 0, "evidence": ""}
+      }
+    },
+    "process_discipline": {
+      "max": 15,
+      "score": 0,
+      "items": {
+        "step_pipeline": {"weight": 3, "score": 0, "evidence": ""},
+        "step_output": {"weight": 3, "score": 0, "evidence": ""},
+        "failure_grading": {"weight": 6, "score": 0, "evidence": ""},
+        "forbidden_path": {"weight": 2, "score": 0, "evidence": ""},
+        "disturb_budget": {"weight": 1, "score": 0, "evidence": ""}
+      }
+    },
+    "structural_sanity": {
+      "max": 20,
+      "score": 0,
+      "items": {
+        "skill_md_under_500": {"weight": 5, "score": 0, "evidence": ""},
+        "references_split": {"weight": 8, "score": 0, "evidence": ""},
+        "scripts_deterministic": {"weight": 7, "score": 0, "evidence": ""}
+      }
+    },
+    "output_contract": {
+      "max": 15,
+      "score": 0,
+      "items": {
+        "structured_intermediate": {"weight": 5, "score": 0, "evidence": ""},
+        "verifiable": {"weight": 3, "score": 0, "evidence": ""},
+        "re_renderable": {"weight": 3, "score": 0, "evidence": ""},
+        "drift_resistant": {"weight": 4, "score": 0, "evidence": ""}
+      }
+    },
+    "guardrails": {
+      "max": 10,
+      "score": 0,
+      "items": {
+        "degradation_path": {"weight": 4, "score": 0, "evidence": ""},
+        "user_language_firewall": {"weight": 3, "score": 0, "evidence": ""},
+        "content_compliance": {"weight": 3, "score": 0, "evidence": ""}
+      }
+    },
+    "config_boundary": {
+      "max": 5,
+      "score": 0,
+      "items": {
+        "personal_email": {"weight": 2, "score": 0, "evidence": ""},
+        "project_name": {"weight": 1, "score": 0, "evidence": ""},
+        "path_magic": {"weight": 1, "score": 0, "evidence": ""},
+        "tool_dependency": {"weight": 1, "score": 0, "evidence": ""}
+      }
+    },
+    "evaluation_closure": {
+      "max": 15,
+      "score": 0,
+      "items": {
+        "evals_dir": {"weight": 4, "score": 0, "evidence": ""},
+        "rubrics_judgement": {"weight": 4, "score": 0, "evidence": ""},
+        "with_without_compare": {"weight": 4, "score": 0, "evidence": ""},
+        "regression_baseline": {"weight": 3, "score": 0, "evidence": ""}
+      }
+    }
+  },
+  "summary": {
+    "total_score": 0,
+    "max_score": 100,
+    "tier": "🔴不合格 | 🟡良好 | 🟢优秀",
+    "strongest_dimension": "[name]",
+    "weakest_dimension": "[name]",
+    "improvement_priority": ["1. ...", "2. ...", "3. ..."]
+  }
+}

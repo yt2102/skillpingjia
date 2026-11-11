@@ -1,0 +1,9 @@
+{
+  "target_path": "evals/cases/regression_jishufangan_v315",
+  "description": "jishufangan v3.x 修复前快照（fd3d101，2026-08-21 reverse-sync）：第一个 libjishu.py 进 git 的 commit。预期：v3.3 P0-1/P1-1 抓出 heading drift + heading 兜底盲点；v3.3.1 FAIL-002 视角：7 个 except:pass 全带 warning 但全无状态传播 → warn_no_propagation=7。",
+  "production_path": true,
+  "expect_ir_closure_gaps": ["heading"],
+  "expect_fallback_uncovered": ["heading"],
+  "expect_warn_no_propagation_min": 5
+}
+

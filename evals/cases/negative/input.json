@@ -1,0 +1,13 @@
+{
+  "target_path": "evals/cases/negative/fixture",
+  "full_content": "无 frontmatter 的 fixture，应 H1 判 ❌",
+  "description": "负面样本：完全没 frontmatter，H1 应判 ❌",
+  "expected_score": {
+    "hard_gates": {
+      "H1": false,
+      "H2": true,
+      "H3": false
+    },
+    "skill_md_lines": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "case_name": "boundary",
+  "skill_mode": "with_skill",
+  "timestamp": "2026-08-22T20:14:08",
+  "case_description": "边界样本：纯预算清单，按负触发应直接作答不走政务格式",
+  "scenario": "",
+  "result": {
+    "ok": true,
+    "output": "/tmp/jishufangan_runner_1787400848507.docx",
+    "size_kb": 36.4
+  }
+}

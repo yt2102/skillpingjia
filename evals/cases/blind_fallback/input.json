@@ -1,0 +1,5 @@
+{
+  "target_path": "evals/cases/blind_fallback",
+  "description": "Blind fallback fixture：parser 产出 h1_present，renderer 的 elif typ in (...) 兜底不含 h1_present。期望 v3.3 fallback_branches.uncovered 抓出 h1_present。",
+  "expect_fallback_uncovered": ["h1_present"]
+}

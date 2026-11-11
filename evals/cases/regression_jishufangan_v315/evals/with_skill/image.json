@@ -1,0 +1,12 @@
+{
+  "case_name": "image",
+  "skill_mode": "with_skill",
+  "timestamp": "2026-08-22T20:14:08",
+  "case_description": "图片处理用例：超大图缩放 ≤1024x1400、透明图白底化、损坏图拦截、docx 三要素闭环",
+  "scenario": "",
+  "result": {
+    "ok": true,
+    "output": "/tmp/jishufangan_runner_1787400848601.docx",
+    "size_kb": 36.4
+  }
+}

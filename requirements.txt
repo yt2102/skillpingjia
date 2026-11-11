@@ -1,0 +1,8 @@
+# skillpingjia 依赖声明
+
+零第三方依赖（仅 Python 3 标准库）：
+- scripts/score.py：json / re / yaml（可选，缺失时降级简单解析）/ pathlib
+- scripts/llm_score.py：json / argparse / pathlib（纯函数，LLM 调用由调用方注入）
+- scripts/regression.py：json / subprocess / pathlib
+
+环境准备：python3 >= 3.9 即可，无需 pip install。

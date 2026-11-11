@@ -1,0 +1,22 @@
+schema_version: 1
+skill: kit-member-query
+role: specialist
+workflows:
+  ask:
+    input: Question
+    output: ValidatedAnswer
+input_artifacts:
+  - Question
+output_artifacts:
+  - ValidatedAnswer
+required_fields:
+  ValidatedAnswer:
+    - answer
+    - sql
+    - provenance
+statuses:
+  - draft
+  - validated
+gates:
+  - name: readiness
+    requires: compiled_layer

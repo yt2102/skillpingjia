@@ -1,0 +1,14 @@
+{
+  "target_path": ".",
+  "description": "评 pingjia 自己：三权分立/配置边界/评估闭环都到位",
+  "expected_score": {
+    "hard_gates": {
+      "H1": true,
+      "H2": true,
+      "H3": true,
+      "H4": true
+    },
+    "structural_sanity_min": 20,
+    "evaluation_closure_min": 15
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "case_name": "normal",
+  "skill_mode": "without_skill",
+  "timestamp": "2026-08-22T20:14:08",
+  "case_description": "正常样本：真实政务方案 prompt，断言能触发 + 生成 structure.json + docx",
+  "scenario": "",
+  "result": {
+    "ok": true,
+    "output": "/tmp/jishufangan_runner_no_skill_1787400848967.docx",
+    "size_kb": 35.8
+  }
+}
